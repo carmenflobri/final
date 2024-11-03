@@ -11,6 +11,9 @@ function App() {
   return (
     <BrowserRouter> 
       <Routes>
+      <Route path="/" exact>
+          <Redirect to="/login" />
+        </Route>
         <Route path='/register' element={<Signup />} />
         <Route path='/login' element={<Login />} />
         <Route path='/home' element={<Home />} />
