@@ -15,7 +15,7 @@ const Myprofile = () => {
     // Fetch all articles on component load
     const fetchArticles = async () => {
         try {
-            const response = await fetch("http://localhost:3006/articles");
+            const response = await fetch(`${process.env.REACT_APP_API_URL}/api/articles`);
             if (response.ok) {
                 const data = await response.json();
                 setArticles(data.articles);

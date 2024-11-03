@@ -11,7 +11,7 @@ function Login() {
     
     const handleSumit = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:3006/login', { email, password })
+        axios.post('{process.env.REACT_APP_API_URL}/api/login', { email, password })
             .then(result => {
                 console.log(result);
                 if (result.data === "Success") {
